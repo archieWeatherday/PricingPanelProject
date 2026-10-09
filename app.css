@@ -52,12 +52,13 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
 .panel.pricing-table{
 	display: flex;
 	background-color: white;
-	height: 70%;
-	width: 60%; /*I dont wanna just guess percentages...is there a better way to do this?*/
+	height: 90%;
+	width: 70%; /*I dont wanna just guess percentages...is there a better way to do this?*/
 	box-sizing: border-box;
 	border: 5px solid white;
 	border-radius: 1.5%;
@@ -73,12 +74,86 @@ body{
 	justify-content: space-evenly;
 
 }
+.pricing-img{
+	height: 30%;
+}
 .pricing-plan:nth-of-type(2){
-	border-left-color: rgb(207, 204, 196,0.2);
+	border-left-color: rgba(207, 204, 196,0.2);
 	border-left-width: 2px;
 	border-left-style: solid;
-	border-right-color: rgb(207, 204, 196,0.2); 
+	border-right-color: rgba(207, 204, 196,0.2); 
 	border-right-width: 2px;
 	border-right-style: solid;
 	padding: 0px 5%; 
+}
+.pricing-header{
+	color: rgb(207, 204, 196);
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 700;
+	padding-bottom: 5%;
+	text-align: center;
+}
+.pricing-features-item{
+    color: rgb(7, 73, 227);
+    text-transform: uppercase;
+    font-size:1.5rem;
+    text-align: center;
+    border-top-color: rgba(207, 204, 196,0.2);
+    border-top-width: 2px;
+    border-top-style: solid;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left:10%; /* hmm...again, i dont really like just guessing percentages...check if anything can be better..*/
+    width: 80%;
+}
+.pricing-features-item:nth-of-type(2){
+	border-bottom-color: rgba(207, 204, 196,0.2);
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+.pricing-price{
+	color: rgb(7, 73, 227);
+	text-transform: uppercase;
+	font-size: 2.5rem;
+}
+.pricing-button{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgb(7, 73, 227);
+	font-size: 1.5rem;
+	border: 2px solid rgba(207, 204, 196,0.5);
+	border-radius: 5%;
+	padding: 3% 10%;
+	transition: background-color 1s, color 2s;
+}
+.pricing-button:hover{
+	background-color: rgb(7, 73, 227);
+	color: white;
+}
+/*Media Query Time!*/
+@media (max-width: 1990px){
+	.panel.pricing-table{
+		flex-direction: column;
+		width: 100vw; /* Why was height: auto here breaking things? This is also why i dont like using random percentages...*/
+	}
+	body{
+		height: auto;
+		width: auto;
+	}
+	.pricing-img{
+		transform: scale(0.7);
+	}
+	.pricing-plan:nth-of-type(2){
+		border-top-color: rgba(207, 204, 196,0.2);
+		border-top-width: 2px;
+		border-top-style: solid;
+		border-bottom-color: rgba(207, 204, 196,0.2);
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+	}
+	.pricing-button{
+		margin-bottom: 5%;
+	}
+
 }
