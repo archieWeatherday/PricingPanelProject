@@ -57,7 +57,7 @@ body{
 	display: flex;
 	background-color: white;
 	height: 70%;
-	width: 60%; /* chatgpt told me this was a bad idea. Come back to it later. Also if ur reading this remembeer to commit!*/
+	width: 60%; /*I dont wanna just guess percentages...is there a better way to do this?*/
 	box-sizing: border-box;
 	border: 5px solid white;
 	border-radius: 1.5%;
