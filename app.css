@@ -151,6 +151,8 @@ body{
 		border-bottom-color: rgba(207, 204, 196,0.2);
 		border-bottom-width: 2px;
 		border-bottom-style: solid;
+		border-left: none;
+		border-right: none;
 	}
 	.pricing-button{
 		margin-bottom: 5%;
